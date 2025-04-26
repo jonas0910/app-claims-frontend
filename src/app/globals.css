@@ -1,6 +1,9 @@
 @import "tailwindcss";
+@plugin "daisyui" {
+  themes: ;
+}
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -23,4 +26,126 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* 🎨 Modo Claro */
+  --color-text: #0a141a; /* Texto principal */
+  --color-text-sec: #475569; /* Texto secundario, para resaltar */
+
+  --color-background: #eeeeee; /* Fondo principal */
+  --color-background-alt: #f0f7fa; /* Fondo para secciones */
+
+  --color-primary: #4593ba; /* para botones detalles clave*/
+  --color-primary-hover: #56a4cb; /* para resaltar primario */
+  --color-primary-alt: #3b82f6; /* primario alternativo */
+
+  --color-secondary: #e5ebee; /* para fondo inputs*/
+  --color-secondary-hover: #f6fcff; /* resalta */
+  --color-secondary-alt: #94a3b8; /* Alternativo más suave, desactivado */
+
+  --color-danger: #dc2626; /* Rojo vibrante para errores */
+  --color-success: #16a34a; /* Verde para éxito */
+  --color-warning: #f59e0b; /* Naranja para advertencias */
+
+  /* 🌙 Modo Oscuro */
+  --color-text-dark: #e3ede4; /* Texto principal */
+  --color-text-sec-dark: #94a3b8; /* Texto secundario */
+
+  --color-background-dark: #151c1e; /* Fondo principal */
+  --color-background-dark-alt: #222222; /* Fondo para secciones */
+
+  --color-primary-dark: #4593ba;
+  --color-primary-hover-dark: #cadcef;
+  --color-primary-alt-dark: #60a5fa;
+
+  --color-secondary-dark: #101619;
+  --color-secondary-hover-dark: #21272a;
+  --color-secondary-alt-dark: #475569;
+
+  --color-danger-dark: #ef4444; /* Rojo brillante */
+  --color-success-dark: #22c55e; /* Verde */
+  --color-warning-dark: #fde047; /* Amarillo claro */
+
+  --color-accent: #012031; /* color para bordes resaltados*/
+  --color-accent-hover: #5d87b9; /* resaltar el accent*/
 }
+
+/* 📌 Estilos globales */
+:root {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.dark {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-dark);
+}
+
+/* ✅ Contenedores */
+/* .container, .card {
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.dark .container, 
+.dark .card {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-border-dark);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+} */
+
+/* ⚠️ Alertas */
+.alert {
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.alert-danger {
+  background-color: var(--color-danger);
+  color: #fff;
+}
+
+.dark .alert-danger {
+  background-color: var(--color-danger-dark);
+}
+
+.alert-success {
+  background-color: var(--color-success);
+  color: #fff;
+}
+
+.dark .alert-success {
+  background-color: var(--color-success-dark);
+}
+
+.alert-warning {
+  background-color: var(--color-warning);
+  color: #fff;
+}
+
+.dark .alert-warning {
+  background-color: var(--color-warning-dark);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+
+
+
+
+
+
+

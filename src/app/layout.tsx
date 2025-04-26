@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import ReactQueryProvider from '@/core/providers/react-query-provider'
+import { ThemeProvider } from '@/core/components/ui/context/theme-context'
+import { Toaster } from '@pheralb/toast'
+import { Space_Grotesk } from 'next/font/google'
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin']
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,10 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={spaceGrotesk.className}>
+        <ReactQueryProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </ReactQueryProvider>
+        <Toaster position='top-center' toastOptions={{
+          font: "inherit"
+        }}/>
+        <div id='react-modals'/>
       </body>
     </html>
   );

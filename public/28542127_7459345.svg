@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+<g id="BACKGROUND">
+	<rect x="0" style="fill:#FFFFFF;" width="499.999" height="500"/>
+</g>
+<g id="OBJECTS">
+	<g>
+		<g>
+			<polygon style="fill:#FF2424;" points="175.161,305.71 241.364,181.032 257.427,211.102 207.24,305.71 			"/>
+		</g>
+		<path style="fill:#FF2424;" d="M273.469,180.934c11.16-21.654,33.653-35.851,58.813-35.851c17.714,0,34.98,7.282,47.371,19.979
+			l4.651,4.766l14.008-26.223l-2.839-2.553c-17.393-15.644-39.834-24.259-63.191-24.259c-17.947,0-35.421,5.078-50.533,14.685
+			c-8.957,5.694-16.842,12.818-23.383,21.038L273.469,180.934z"/>
+		<polygon style="fill:#991A5A;" points="214.873,230.922 230.888,200.761 246.908,230.931 230.901,261.107 		"/>
+		<path style="fill:#434A5B;" d="M332.282,305.71c-31.282,0-60.9-15.904-78.377-41.792c0,0-5.751-9.67-6.82-11.895l-43.004-80.986
+			l-71.56,134.673h-31.979l103.54-194.994l71.089,133.881c11.868,20.25,33.741,32.823,57.11,32.823
+			c18.289,0,35.938-7.682,48.422-21.077l4.651-4.991l14.101,26.4l-2.741,2.557C379.149,296.69,356.266,305.71,332.282,305.71z"/>
+	</g>
+</g>
+<g id="TEXTS">
+	<g>
+		<g>
+			<text transform="matrix(1 0 0 1 144.4436 351.6808)"><tspan x="0" y="0" style="fill:#3B4051; font-family:'Outfit-ExtraBold'; font-size:41.7059px;">name</tspan><tspan x="107.016" y="0" style="fill:#FF2424; font-family:'Outfit-ExtraBold'; font-size:41.7059px;">logo</tspan></text>
+			
+				<text transform="matrix(1 0 0 1 174.0441 368.9406)" style="fill:#2C2E33; font-family:'Lato-Regular'; font-size:12.9752px; letter-spacing:2;">tagline goes here</text>
+		</g>
+	</g>
+</g>
+</svg>

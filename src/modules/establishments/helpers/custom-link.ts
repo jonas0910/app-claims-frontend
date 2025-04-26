@@ -1,0 +1,1 @@
+export const baseUrlClaim = typeof window !== 'undefined' ? `${window.location.origin}/reclamo-virtual` : ''

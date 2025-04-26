@@ -1,0 +1,12 @@
+import React, { SVGProps } from 'react'
+
+const FileIcon = (props: SVGProps<SVGSVGElement>) => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" {...props}>
+      <path d="M 30.398438 2 L 7 2 L 7 48 L 43 48 L 43 14.601563 Z M 30 15 L 30 4.398438 L 40.601563 15 Z"></path>
+    </svg>
+  )
+}
+
+export default FileIcon
+
