@@ -10,7 +10,7 @@ interface ClaimsFilterFormProps {
   filters: any
 }
 
-const ClaimsFilterForm = ({ setFilters, filters }: ClaimsFilterFormProps) => {
+const ClaimsFilterForm = ({ setFilters }: ClaimsFilterFormProps) => {
   const form = useForm({})
 
   const resetFilters = () => {
@@ -53,7 +53,7 @@ const ClaimsFilterForm = ({ setFilters, filters }: ClaimsFilterFormProps) => {
                   inputName='establishment_id'
                   label='Establecimiento'
                   options={establishmentsToSelect}
-                  isLoading={establishmentIsLoading}
+                  loading={establishmentIsLoading}
                 />
               </div>
 
@@ -72,7 +72,7 @@ const ClaimsFilterForm = ({ setFilters, filters }: ClaimsFilterFormProps) => {
                   inputName='category_id'
                   label='Categoría'
                   options={categoriesClaimToSelect}
-                  isLoading={categoriesIsLoading}
+                  loading={categoriesIsLoading}
                 />
               </div>
             </div>

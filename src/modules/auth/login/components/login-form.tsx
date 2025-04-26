@@ -7,16 +7,21 @@ import { Button, EmailField, PasswordToggleField } from "@/core/components/ui";
 import { type LoginInputsType, LoginSchema } from "../models/login-schema";
 import { useLogin } from "../hooks/use-login";
 import { BookOpenIcon } from "@heroicons/react/20/solid";
+import { Login } from "../types/login";
 
 const LoginForm = () => {
   const form = useForm<LoginInputsType>({
     mode: "all",
     resolver: zodResolver(LoginSchema),
+    defaultValues: {
+      email: "",
+      password: "",
+    },
   });
 
   const { loginFn, isPending } = useLogin();
 
-  const onSubmit = async (data: LoginInputsType) => {
+  const onSubmit = async (data: Login) => {
     const { status, success } = await loginFn(data);
     if (status === 200 && success) {
       form.reset();
@@ -43,10 +48,12 @@ const LoginForm = () => {
             <EmailField
               placeholder="Correo electrónico"
               inputName="email"
+              required
               inputError={form.formState.errors.email}
             />
             <PasswordToggleField
               inputName="password"
+              required
               inputError={form.formState.errors.password}
             />
           </div>

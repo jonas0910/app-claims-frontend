@@ -84,7 +84,7 @@ const NotificationEmailsForm = ({
               inputName='establishment_id'
               inputError={form.formState.errors.establishment_id}
               options={establishmentsToSelect}
-              isLoading={isLoading}
+              loading={isLoading}
               key={crypto.randomUUID()}
             />
 

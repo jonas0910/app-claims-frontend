@@ -29,7 +29,9 @@ const DateField = ({ inputName, label, inputError, className, ...props }: DateFi
           {...register(inputName, {
             onChange: (e) => setValue(inputName, e.target.value), // Asegura que el valor se guarde
           })}
-          ref={(el: HTMLInputElement | null) => (inputRef.current = el)}
+          ref={(el: HTMLInputElement | null) => {
+            inputRef.current = el;
+          }}
           {...props}
           className={`border text-text dark:text-text-dark bg-secondary dark:bg-secondary-dark border-accent rounded-md px-3 py-3 focus:outline-none focus:ring-1 focus:ring-accent w-full ${className}`}
         />

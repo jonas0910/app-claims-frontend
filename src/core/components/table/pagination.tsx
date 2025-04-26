@@ -1,7 +1,5 @@
-import { useQueryParams } from '@/core/hooks/utils/use-query-params'
-import { PaginationState, Table } from '@tanstack/react-table'
-import { useRouter } from 'next/navigation'
-import { useRef } from 'react'
+import {  Table } from '@tanstack/react-table'
+
 
 interface PaginationProps<T> {
   table: Table<T>

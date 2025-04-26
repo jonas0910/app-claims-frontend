@@ -175,7 +175,7 @@ const ClaimForm = () => {
                             label="Tipo de documento"
                             inputName="document_type"
                             options={documentTypesToSelect}
-                            isLoading={isDocumentTypesLoading}
+                            loading={isDocumentTypesLoading}
                             inputError={form.formState.errors.document_type}
                           />
 
@@ -229,7 +229,7 @@ const ClaimForm = () => {
                               label="Monto reclamado (moneda)"
                               inputName="currency_type"
                               options={currencyTypesToSelect}
-                              isLoading={isCurrencyLoading}
+                              loading={isCurrencyLoading}
                               inputError={form.formState.errors.currency_type}
                             />
                             <NumberField

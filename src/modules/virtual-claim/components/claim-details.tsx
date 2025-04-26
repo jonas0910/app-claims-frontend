@@ -37,9 +37,9 @@ const ClaimDetails = () => {
               </div>
 
               <p className='font-bold text-2xl mt-5 text-center'>
-                {claim?.company.trade_name}
+                {claim?.user.company_name}
               </p>
-              <p className='text-center'>RUC: {claim?.company.ruc}</p>
+              <p className='text-center'>RUC: {claim?.user.company_ruc}</p>
             </div>
             <div>
               <h1 className='font-bold text-4xl mt-10 text-center'>
@@ -49,9 +49,9 @@ const ClaimDetails = () => {
                 Codigo de identificación: {claim?.establishment.code}
               </p>
               <p className='font-bold text-2xl mt-10 text-center'>
-                {claim?.company.corporate_name}
+                {claim?.user.company_name}
               </p>
-              <p className='text-center'>{claim.company.fiscal_address}</p>
+              <p className='text-center'>{claim.user.company_address}</p>
             </div>
             <div className='my-5 flex flex-col gap-4 justify-center items-center'>
               <p>Codigo de reclamación: {claim?.claim_code}</p>
@@ -64,9 +64,9 @@ const ClaimDetails = () => {
             <div className='mx-auto sm:w-1/2 md:w-1/3 w-full'>
               <Card title='Proveedor del bien o servicio' className='my-5'>
                 <div>
-                  <p>{claim.company.trade_name}</p>
-                  <p>RUC: {claim.company.ruc}</p>
-                  <p>{claim.company.fiscal_address}</p>
+                  <p>{claim.user.company_name}</p>
+                  <p>RUC: {claim.user.company_ruc}</p>
+                  <p>{claim.user.company_address}</p>
 
                   <h3 className='font-bold mt-5'>Establecimiento</h3>
                   <p>
@@ -80,7 +80,7 @@ const ClaimDetails = () => {
                 <div>
                   <p>{claim.name}</p>
                   <p>
-                    {claim.document_type.abbreviation}: {claim.document_number}
+                    {claim.document_type.abreviation}: {claim.document_number}
                   </p>
                   <p>Correo electrónico: {claim.email}</p>
                 </div>

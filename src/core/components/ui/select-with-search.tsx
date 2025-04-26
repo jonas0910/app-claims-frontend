@@ -18,6 +18,8 @@ interface SelectWithSearchProps {
   options: Option[];
   inputError?: FieldError;
   loading?: boolean;
+  onChange?: (value: string) => void; // Add the onChange prop
+  value?: string; // Add the value prop
 }
 
 const SelectWithSearch = ({
