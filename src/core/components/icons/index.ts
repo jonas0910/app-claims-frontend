@@ -26,7 +26,6 @@ import LoadingIcon from './loading-icon'
 import ClickIcon from './click-icon'
 import UnavailableIcon from './unavailable-icon'
 import { NotificationIcon } from './notification-icon'
-import SunatIcon from './sunat-icon'
 import SendIcon from './send-icon'
 import EmailIcon from './email-icon'
 import QuestionIcon from './question-icon'
@@ -67,7 +66,6 @@ export {
   ClickIcon,
   UnavailableIcon,
   NotificationIcon,
-  SunatIcon,
   SendIcon,
   EmailIcon,
   QuestionIcon,

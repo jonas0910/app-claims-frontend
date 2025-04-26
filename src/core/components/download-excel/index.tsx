@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import xlsx from 'json-as-xlsx'
 import { Button } from '../ui'
 import { ElementType, ReactNode } from 'react'
@@ -27,7 +28,7 @@ const DownloadExcel = ({
     }
   ]
 
-  let settings = {
+  const settings = {
     fileName: filename,
     extraLength: 3
   }

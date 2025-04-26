@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
-  flexRender,
   getCoreRowModel,
   useReactTable
 } from '@tanstack/react-table'

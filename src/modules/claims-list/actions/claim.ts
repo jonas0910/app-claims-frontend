@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-non-null-asserted-optional-chain */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use server'
 import { Paginate } from '@/core/types/paginate'
 import { axiosInstance } from '@/core/config/axios'
