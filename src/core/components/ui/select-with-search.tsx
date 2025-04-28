@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState, useRef, useEffect } from "react";
 import { FieldError, useFormContext } from "react-hook-form";
 import {
@@ -25,9 +25,10 @@ interface SelectWithSearchProps {
 const SelectWithSearch = ({
   label = " ",
   inputName,
-  options= [],
+  options = [],
   inputError,
   loading = false,
+  onChange = () => {}, // Default to a no-op function
 }: SelectWithSearchProps) => {
   const { register, setValue, watch } = useFormContext();
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -39,6 +40,7 @@ const SelectWithSearch = ({
 
   const handleSelect = (option: Option) => {
     setValue(inputName, option.value);
+    onChange(option.value.toString()); // <-- AÑADIR ESTA LÍNEA
     setSearchTerm("");
     setIsOpen(false);
   };
@@ -79,10 +81,9 @@ const SelectWithSearch = ({
 
   useEffect(() => {
     if (!watch(inputName) && watch(inputName) !== "") {
-      setValue(inputName, ""); 
+      setValue(inputName, "");
     }
   }, [inputName, setValue, watch]);
-  
 
   return (
     <div className="w-full flex flex-col gap-1 relative" ref={dropdownRef}>

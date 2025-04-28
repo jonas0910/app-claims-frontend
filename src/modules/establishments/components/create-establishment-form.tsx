@@ -181,6 +181,7 @@ const CreateEstablishmentForm = ({
                       form.setValue("department", value as string);
                       form.setValue("province", "");
                       form.setValue("district", "");
+                      console.log("departamento", value);
                     }}
                     value={form.watch("department")}
                     inputError={form.formState.errors.department}
