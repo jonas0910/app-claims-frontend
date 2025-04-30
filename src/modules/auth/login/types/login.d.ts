@@ -17,7 +17,14 @@ export interface UserAuth {
   name: string
   email: string
   email_verified_at: string
-  company_id: string
+
+  company_name: string
+  company_address: string
+  company_ruc: string
+  company_postal_code: string
+  company_link: string
+  company_logo: string
+  
   super_admin: number // estaba como string
   created_at: string
   updated_at: string

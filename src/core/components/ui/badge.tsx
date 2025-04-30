@@ -43,7 +43,7 @@ const Badge = ({
 export default Badge
 
 const badgeVariants = cva(
-  'flex items-center justify-center px-2 py-1 rounded-badge border-2 font-semibold text-xs',
+  'flex items-center justify-center px-2 py-1 rounded-full border-2 font-semibold text-xs',
   {
     variants: {
       variant: {

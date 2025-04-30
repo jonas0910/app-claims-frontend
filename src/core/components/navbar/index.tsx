@@ -5,10 +5,17 @@ import UserEditForm from "@/modules/user/components/user-edit-form";
 import { UserIcon } from "@heroicons/react/20/solid";
 import Modal from "../modal";
 import { useModal } from "@/core/hooks/utils/use-modal";
+import useUser from "@/modules/user/hooks/use-user";
+import { useRef } from "react";
 
 const Navbar = () => {
   const pathname = usePathname();
-  const { setLogout } = useAuthSessionStore();
+  const { setLogout} = useAuthSessionStore();
+  const formRef = useRef<{ resetForm: () => void }>(null);
+  const handleReset = () => {
+    formRef.current?.resetForm();
+  };
+  const { user, isLoading} = useUser();
   const handleLogout = () => {
     setLogout();
   };
@@ -39,8 +46,16 @@ const Navbar = () => {
           <span className="">Cerrar Sesion</span>
         </Button>
       </div>
-      <Modal elementById="user-edit-form">
-        <UserEditForm />
+      <Modal elementById="user-edit-form" onCancel={handleReset}>
+        {
+          isLoading ? (
+            <div className="flex justify-center items-center h-full">
+              <p className="text-white">Cargando...</p>
+            </div>
+          ) : (
+            <UserEditForm user={user!} ref={formRef}/>
+          )
+        }
       </Modal>
     </div>
   );

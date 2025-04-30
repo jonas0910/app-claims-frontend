@@ -1,10 +1,26 @@
-
+"use server";
 //instancia axios para prueba
-import axios from 'axios'
+import axios, { InternalAxiosRequestConfig } from "axios";
+import { cookies } from "next/headers";
 // import { cookies } from 'next/headers'
 export const axiosInstance = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL,
-})
+});
+
+axiosInstance.interceptors.request.use(
+  async (config: InternalAxiosRequestConfig) => {
+    const cookieStore = await cookies();
+    const token = decodeURIComponent(cookieStore.get("token")?.value);
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
 // axiosInstance.interceptors.request.use(
 //   (config: InternalAxiosRequestConfig) => {
 //     const cookieStore = cookies()
@@ -27,4 +43,3 @@ export const axiosInstance = axios.create({
 //     return Promise.reject(error)
 //   }
 // )
-
